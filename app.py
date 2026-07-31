@@ -151,7 +151,7 @@ if (user_input) and (leader_agent):
         except:
           url = f"https://image.pollinations.ai/{user_input}"
           time.sleep(4)
-          st.Image(url)
+          st.image(url)
 
   # TAB 2 CODE
   with tab2:
