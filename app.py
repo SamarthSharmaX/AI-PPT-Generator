@@ -169,7 +169,7 @@ if (user_inout) and (agent):
       with st.spinner("Running Agent"):
         try:
           code = run_agent(leader_agent,user_input)
-           st.html(code,width = "stretch",
+          st.html(code,width = "stretch",
                  unsafe_allow_javascript = True)
           
           # File Save
