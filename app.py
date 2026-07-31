@@ -168,7 +168,7 @@ if (user_input) and (leader_agent):
 
   # TAB 3 CODE
   with tab3:
-    if st.button("Fetch News", key = "Fetch-News"):
+    if st.button("Fetch news:", key = "Fetch-News"):
       with st.spinner("Running Agent"):
         try:
           code = run_agent(leader_agent,user_input)
