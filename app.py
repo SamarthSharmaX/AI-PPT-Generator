@@ -75,7 +75,7 @@ def generate_image(img_prompt,slide_no = 1):
 
   from PIL import Image
   img = Image.open(f"ai_image_{slide_no}.jpeg")
-  return img
+  return url
 
 def agent_prompt(query):
   """Thid help to promptify the given user
@@ -144,7 +144,8 @@ if (user_input) and (leader_agent):
     if st.button("Generate Image", key = "GEN_Iamge"):
       with st.spinner("Running Agent"):
         try:
-          generate_image(user_input)
+          img = generate_image(user_input)
+          st.image(img)
         except:
           url = f"https://image.pollinations.ai/{user_input}"
           time.sleep(4)
