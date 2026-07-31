@@ -158,7 +158,7 @@ if (user_input) and (leader_agent):
     if st.button("Fetch News", key = "Fetch-News"):
       with st.spinner("Running Agent"):
         try:
-          prompt = "Give news in HTML Format"
+          prompt = "Give news in HTML Format" + user_input
           response = leader_agent.invoke({'messages':[{'role':'user','content':prompt}]})
           code = response['messages'][-1].content[-1]['text']
           st.html(code,width = "stretch",
