@@ -34,7 +34,7 @@ elif all(ALL_API):
   
   # MODEL LOAD
   model = ChatGoogleGenerativeAI(
-    google_api_key = GOOGLE_API_KEY
+    google_api_key = GOOGLE_API_KEY,
     model = st.sidebar.selectbbox("Gemini-Model-Name",options = ['gemini-2.5-flash',
                                                                  'gemini-2.5-flash-lite',
                                                                  'gemini-3.5-flash',
