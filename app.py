@@ -138,10 +138,10 @@ leader_agent = create_agent(
 tab1,tab2,tab3 = st.tabs(["Generate Image",
                           "Fetch Latest News",
                           "Generate PPT"])
-if (user_inout) and (agent):
+if (user_input) and (leader_agent):
   # TAB 1 CODE
   with tab1:
-    if st.button("Generate Image", keys = "GEN_Iamge"):
+    if st.button("Generate Image", key = "GEN_Iamge"):
       with st.spinner("Running Agent"):
         try:
           generate_image(user_input)
@@ -152,7 +152,7 @@ if (user_inout) and (agent):
 
   # TAB 2 CODE
   with tab2:
-    if st.button("Fetch News", keys = "Fetch-News"):
+    if st.button("Fetch News", key = "Fetch-News"):
       with st.spinner("Running Agent"):
         try:
           prompt = "Give news in HTML Format"
@@ -165,7 +165,7 @@ if (user_inout) and (agent):
 
   # TAB 3 CODE
   with tab3:
-    if st.button("Fetch News", keys = "Fetch-News"):
+    if st.button("Fetch News", key = "Fetch-News"):
       with st.spinner("Running Agent"):
         try:
           code = run_agent(leader_agent,user_input)
