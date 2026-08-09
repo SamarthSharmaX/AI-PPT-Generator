@@ -29,7 +29,7 @@ GROQ_API_KEY = st.sidebar.text_input("Groq-API", type = "password")
 
 # ==========API Validations==========
 
-ALL_API = [GOOGLE_API_KEY, TAVILY_API_KEY]
+ALL_API = [GOOGLE_API_KEY, TAVILY_API_KEY,GROQ_API_KEY]
 
 if not all(ALL_API):
   st.sidebar.error("Must Pass all API Key's")
