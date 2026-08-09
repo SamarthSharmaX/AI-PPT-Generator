@@ -25,6 +25,7 @@ st.sidebar.title("Enter API Key's")
 
 GOOGLE_API_KEY = st.sidebar.text_input("Google-API", type = "password")
 TAVILY_API_KEY = st.sidebar.text_input("Tavily-API", type = "password")
+GROQ_API_KEY = st.sidebar.text_input("Groq-API", type = "password")
 
 # ==========API Validations==========
 
